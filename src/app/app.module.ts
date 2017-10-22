@@ -4,6 +4,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 
+
 // Import containers
 import {
   FullLayout,
@@ -13,7 +14,7 @@ import {
 const APP_CONTAINERS = [
   FullLayout,
   SimpleLayout
-]
+];
 
 // Import components
 import {
@@ -36,7 +37,7 @@ const APP_COMPONENTS = [
   AppSidebarFooter,
   AppSidebarForm,
   AppSidebarHeader
-]
+];
 
 // Import directives
 import {
@@ -49,7 +50,7 @@ const APP_DIRECTIVES = [
   AsideToggleDirective,
   NAV_DROPDOWN_DIRECTIVES,
   SIDEBAR_TOGGLE_DIRECTIVES
-]
+];
 
 // Import routing module
 import { AppRoutingModule } from './app.routing';
@@ -58,20 +59,24 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+
+
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    ...APP_DIRECTIVES
+    ...APP_DIRECTIVES,
   ],
   providers: [{
     provide: LocationStrategy,

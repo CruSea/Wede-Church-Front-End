@@ -1,0 +1,145 @@
+<div class="animated fadeIn">
+
+  <agm-map  [latitude]="lat" [longitude]="lng">
+    <agm-marker *ngFor ="let church of dummyChurch" [latitude]="church.lat" [longitude]="church.long">
+
+    </agm-marker>
+  </agm-map>
+
+  <br>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Church Details
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Church name</th>
+              <th>Description</th>
+              <th>Location</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Logo</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor = "let church of dummyChurch">
+                <td>{{church.name}}</td>
+                <td>{{church.description}}</td>
+                <td>{{church.location}}</td>
+                <td>6.3</td>
+                <td>38.4</td>
+                <td><img src="{{church.logo}}" width="40px" height="40px" /> </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+
+    <div class="col-sm-6">
+
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="card">
+            <div class="card-header">
+              Register Churches
+            </div>
+            <div class="card-body">
+              <form action="" method="post">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Church Name</span>
+                    <input type="text" id="firstname" name="firstname" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Description Name</span>
+                    <input type="text" id="lastname" name="lastname" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">  State  </span>
+                    <input type="email" id="email" name="email" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Location</span>
+                    <input type="text" id="username3" name="username" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Phone</span>
+                    <input type="password" id="password3" name="password" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Latitude</span>
+                    <input type="password" id="latitude" name="latitude" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Longitude</span>
+                    <input type="password" id="longitude" name="longitude" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Logo</span>
+                    <input type="file" id="logo" name="logo" class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                  </div>
+                </div>
+
+                <div class="form-group form-actions">
+                  <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+

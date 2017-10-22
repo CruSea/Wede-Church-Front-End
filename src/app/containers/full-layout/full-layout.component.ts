@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-dashboard',
   templateUrl: './full-layout.component.html'
 })
+
 export class FullLayout implements OnInit {
 
   // public disabled = false;
